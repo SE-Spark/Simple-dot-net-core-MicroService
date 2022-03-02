@@ -56,7 +56,6 @@ C:\Users\samuel\source\repos\MicroServiceSample\Products.MicroService\obj\Debug\
 C:\Users\samuel\source\repos\MicroServiceSample\Products.MicroService\obj\Debug\net5.0\scopedcss\bundle\Products.MicroService.styles.css
 C:\Users\samuel\source\repos\MicroServiceSample\Products.MicroService\obj\Debug\net5.0\staticwebassets\Products.MicroService.StaticWebAssets.Manifest.cache
 C:\Users\samuel\source\repos\MicroServiceSample\Products.MicroService\obj\Debug\net5.0\Products.MicroService.RazorTargetAssemblyInfo.cache
-C:\Users\samuel\source\repos\MicroServiceSample\Products.MicroService\obj\Debug\net5.0\Products.MicroService.csproj.CopyComplete
 C:\Users\samuel\source\repos\MicroServiceSample\Products.MicroService\obj\Debug\net5.0\Products.MicroService.dll
 C:\Users\samuel\source\repos\MicroServiceSample\Products.MicroService\obj\Debug\net5.0\ref\Products.MicroService.dll
 C:\Users\samuel\source\repos\MicroServiceSample\Products.MicroService\obj\Debug\net5.0\Products.MicroService.pdb

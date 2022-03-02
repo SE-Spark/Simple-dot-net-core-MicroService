@@ -48,6 +48,14 @@
             "Ocelot": {
               "target": "Package",
               "version": "[17.0.1, )"
+            },
+            "Ocelot.Cache.CacheManager": {
+              "target": "Package",
+              "version": "[17.0.1, )"
+            },
+            "Ocelot.Provider.Polly": {
+              "target": "Package",
+              "version": "[17.0.1, )"
             }
           },
           "imports": [

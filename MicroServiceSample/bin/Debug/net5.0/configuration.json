@@ -10,7 +10,23 @@
         }
       ],
       "UpstreamPathTemplate": "/gateway/product",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "FileCacheOptions": {
+        "TtlSeconds": 30,
+        "Region": "KE"
+      },
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 1000,
+        "TimeoutValue": 5000
+      }
     },
     {
       "DownstreamPathTemplate": "/api/product/{id}",
@@ -34,7 +50,23 @@
         }
       ],
       "UpstreamPathTemplate": "/gateway/customer",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "FileCacheOptions": {
+        "TtlSeconds": 30,
+        "Region": "KE"
+      },
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 1000,
+        "TimeoutValue": 5000
+      }
     },
     {
       "DownstreamPathTemplate": "/api/customer/{id}",
@@ -46,6 +78,54 @@
         }
       ],
       "UpstreamPathTemplate": "/gateway/customer/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/delivery",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 41237
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/delivery",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/delivery/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 41237
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/delivery/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/order",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 12386
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/order",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/order/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 12386
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/order/{id}",
       "UpstreamHttpMethod": [ "GET", "DELETE" ]
     }
   ],

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Mbe/xmbjeIK6eWFeTQtOzydpTnA9P/xwDFE38w8XJjLDusjbrlRURl+rYyG2Cq4y1YMu/9VESbVv2YN+c4DYpA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\samuel\\source\\repos\\MicroServiceSample\\SharedLibrary\\SharedLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\samuel\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

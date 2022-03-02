@@ -34,6 +34,8 @@
       "MicroServiceSample/1.0.0": {
         "dependencies": {
           "Ocelot": "17.0.1",
+          "Ocelot.Cache.CacheManager": "17.0.1",
+          "Ocelot.Provider.Polly": "17.0.1",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -114,10 +116,10 @@
           "Microsoft.CSharp.Reference": "5.0.0.0",
           "Microsoft.Extensions.Caching.Abstractions": "5.0.0.0",
           "Microsoft.Extensions.Caching.Memory": "5.0.0.0",
-          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0.0",
-          "Microsoft.Extensions.Configuration.Binder": "5.0.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions.Reference": "5.0.0.0",
+          "Microsoft.Extensions.Configuration.Binder.Reference": "5.0.0.0",
           "Microsoft.Extensions.Configuration.CommandLine": "5.0.0.0",
-          "Microsoft.Extensions.Configuration": "5.0.0.0",
+          "Microsoft.Extensions.Configuration.Reference": "5.0.0.0",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "5.0.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "5.0.0.0",
           "Microsoft.Extensions.Configuration.Ini": "5.0.0.0",
@@ -126,7 +128,7 @@
           "Microsoft.Extensions.Configuration.UserSecrets": "5.0.0.0",
           "Microsoft.Extensions.Configuration.Xml": "5.0.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions.Reference": "5.0.0.0",
-          "Microsoft.Extensions.DependencyInjection": "5.0.0.0",
+          "Microsoft.Extensions.DependencyInjection.Reference": "5.0.0.0",
           "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions": "5.0.0.0",
           "Microsoft.Extensions.Diagnostics.HealthChecks": "5.0.0.0",
           "Microsoft.Extensions.FileProviders.Abstractions": "5.0.0.0",
@@ -141,26 +143,26 @@
           "Microsoft.Extensions.Identity.Stores": "5.0.0.0",
           "Microsoft.Extensions.Localization.Abstractions": "5.0.0.0",
           "Microsoft.Extensions.Localization": "5.0.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "5.0.0.0",
+          "Microsoft.Extensions.Logging.Abstractions.Reference": "5.0.0.0",
           "Microsoft.Extensions.Logging.Configuration": "5.0.0.0",
           "Microsoft.Extensions.Logging.Console": "5.0.0.0",
           "Microsoft.Extensions.Logging.Debug": "5.0.0.0",
-          "Microsoft.Extensions.Logging": "5.0.0.0",
+          "Microsoft.Extensions.Logging.Reference": "5.0.0.0",
           "Microsoft.Extensions.Logging.EventLog": "5.0.0.0",
           "Microsoft.Extensions.Logging.EventSource": "5.0.0.0",
           "Microsoft.Extensions.Logging.TraceSource": "5.0.0.0",
           "Microsoft.Extensions.ObjectPool": "5.0.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "5.0.0.0",
           "Microsoft.Extensions.Options.DataAnnotations": "5.0.0.0",
-          "Microsoft.Extensions.Options": "5.0.0.0",
-          "Microsoft.Extensions.Primitives": "5.0.0.0",
+          "Microsoft.Extensions.Options.Reference": "5.0.0.0",
+          "Microsoft.Extensions.Primitives.Reference": "5.0.0.0",
           "Microsoft.Extensions.WebEncoders": "5.0.0.0",
           "Microsoft.JSInterop": "5.0.0.0",
           "Microsoft.Net.Http.Headers": "5.0.0.0",
           "Microsoft.VisualBasic.Core": "10.0.6.0",
           "Microsoft.VisualBasic": "10.0.0.0",
           "Microsoft.Win32.Primitives": "5.0.0.0",
-          "Microsoft.Win32.Registry": "5.0.0.0",
+          "Microsoft.Win32.Registry.Reference": "5.0.0.0",
           "mscorlib": "4.0.0.0",
           "netstandard": "2.1.0.0",
           "System.AppContext": "5.0.0.0",
@@ -253,7 +255,7 @@
           "System.Resources.Reader": "5.0.0.0",
           "System.Resources.ResourceManager": "5.0.0.0",
           "System.Resources.Writer": "5.0.0.0",
-          "System.Runtime.CompilerServices.Unsafe": "5.0.0.0",
+          "System.Runtime.CompilerServices.Unsafe.Reference": "5.0.0.0",
           "System.Runtime.CompilerServices.VisualC": "5.0.0.0",
           "System.Runtime": "5.0.0.0",
           "System.Runtime.Extensions": "5.0.0.0",
@@ -268,7 +270,7 @@
           "System.Runtime.Serialization.Json": "5.0.0.0",
           "System.Runtime.Serialization.Primitives": "5.0.0.0",
           "System.Runtime.Serialization.Xml": "5.0.0.0",
-          "System.Security.AccessControl": "5.0.0.0",
+          "System.Security.AccessControl.Reference": "5.0.0.0",
           "System.Security.Claims": "5.0.0.0",
           "System.Security.Cryptography.Algorithms": "5.0.0.0",
           "System.Security.Cryptography.Cng": "5.0.0.0",
@@ -278,9 +280,9 @@
           "System.Security.Cryptography.X509Certificates": "5.0.0.0",
           "System.Security.Cryptography.Xml": "5.0.0.0",
           "System.Security": "4.0.0.0",
-          "System.Security.Permissions": "5.0.0.0",
+          "System.Security.Permissions.Reference": "5.0.0.0",
           "System.Security.Principal": "5.0.0.0",
-          "System.Security.Principal.Windows": "5.0.0.0",
+          "System.Security.Principal.Windows.Reference": "5.0.0.0",
           "System.Security.SecureString": "5.0.0.0",
           "System.ServiceModel.Web": "4.0.0.0",
           "System.ServiceProcess": "4.0.0.0",
@@ -323,6 +325,54 @@
         },
         "compile": {
           "MicroServiceSample.dll": {}
+        }
+      },
+      "CacheManager.Core/2.0.0-beta-1629": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.5.0",
+          "System.Diagnostics.PerformanceCounter": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/CacheManager.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/CacheManager.Core.dll": {}
+        }
+      },
+      "CacheManager.Microsoft.Extensions.Configuration/2.0.0-beta-1629": {
+        "dependencies": {
+          "CacheManager.Core": "2.0.0-beta-1629",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/CacheManager.Microsoft.Extensions.Configuration.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/CacheManager.Microsoft.Extensions.Configuration.dll": {}
+        }
+      },
+      "CacheManager.Microsoft.Extensions.Logging/2.0.0-beta-1629": {
+        "dependencies": {
+          "CacheManager.Core": "2.0.0-beta-1629",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "Microsoft.Extensions.Logging": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/CacheManager.Microsoft.Extensions.Logging.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/CacheManager.Microsoft.Extensions.Logging.dll": {}
         }
       },
       "FluentValidation/9.3.0": {
@@ -382,6 +432,26 @@
         }
       },
       "Microsoft.CSharp/4.7.0": {},
+      "Microsoft.Extensions.Configuration/2.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0"
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/2.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.0.0"
+        }
+      },
+      "Microsoft.Extensions.Configuration.Binder/2.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.0.0"
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/2.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        }
+      },
       "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {},
       "Microsoft.Extensions.DiagnosticAdapter/3.1.10": {
         "dependencies": {
@@ -395,6 +465,32 @@
         },
         "compile": {
           "lib/netcoreapp2.0/Microsoft.Extensions.DiagnosticAdapter.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging/2.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.0"
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/2.0.0": {},
+      "Microsoft.Extensions.Options/2.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Primitives": "2.0.0"
+        }
+      },
+      "Microsoft.Extensions.Primitives/2.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
+        }
+      },
+      "Microsoft.NETCore.Platforms/2.0.0": {},
+      "Microsoft.Win32.Registry/4.5.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0"
         }
       },
       "Newtonsoft.Json/12.0.2": {
@@ -439,7 +535,123 @@
           "lib/net5.0/Ocelot.dll": {}
         }
       },
+      "Ocelot.Cache.CacheManager/17.0.1": {
+        "dependencies": {
+          "CacheManager.Core": "2.0.0-beta-1629",
+          "CacheManager.Microsoft.Extensions.Configuration": "2.0.0-beta-1629",
+          "CacheManager.Microsoft.Extensions.Logging": "2.0.0-beta-1629",
+          "Ocelot": "17.0.1"
+        },
+        "runtime": {
+          "lib/net5.0/Ocelot.Cache.CacheManager.dll": {
+            "assemblyVersion": "17.0.1.0",
+            "fileVersion": "17.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Ocelot.Cache.CacheManager.dll": {}
+        }
+      },
+      "Ocelot.Provider.Polly/17.0.1": {
+        "dependencies": {
+          "Ocelot": "17.0.1",
+          "Polly": "7.2.1"
+        },
+        "runtime": {
+          "lib/net5.0/Ocelot.Provider.Polly.dll": {
+            "assemblyVersion": "17.0.1.0",
+            "fileVersion": "17.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Ocelot.Provider.Polly.dll": {}
+        }
+      },
+      "Polly/7.2.1": {
+        "runtime": {
+          "lib/netstandard2.0/Polly.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Polly.dll": {}
+        }
+      },
+      "System.Configuration.ConfigurationManager/4.5.0": {
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.5.0",
+          "System.Security.Permissions": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
+        }
+      },
       "System.Diagnostics.DiagnosticSource/4.7.1": {},
+      "System.Diagnostics.PerformanceCounter/4.5.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.Win32.Registry": "4.5.0",
+          "System.Configuration.ConfigurationManager": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Diagnostics.PerformanceCounter.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Diagnostics.PerformanceCounter.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Diagnostics.PerformanceCounter.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.4.0": {},
+      "System.Security.AccessControl/4.5.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "System.Security.Principal.Windows": "4.5.0"
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "System.Security.Permissions/4.5.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0"
+        }
+      },
+      "System.Security.Principal.Windows/4.5.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0"
+        }
+      },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Antiforgery.dll": {}
@@ -920,13 +1132,13 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.Configuration.Abstractions/5.0.0.0": {
+      "Microsoft.Extensions.Configuration.Abstractions.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Configuration.Abstractions.dll": {}
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.Configuration.Binder/5.0.0.0": {
+      "Microsoft.Extensions.Configuration.Binder.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Configuration.Binder.dll": {}
         },
@@ -938,7 +1150,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.Configuration/5.0.0.0": {
+      "Microsoft.Extensions.Configuration.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Configuration.dll": {}
         },
@@ -992,7 +1204,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.DependencyInjection/5.0.0.0": {
+      "Microsoft.Extensions.DependencyInjection.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Extensions.DependencyInjection.dll": {}
         },
@@ -1082,7 +1294,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.Logging.Abstractions/5.0.0.0": {
+      "Microsoft.Extensions.Logging.Abstractions.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Logging.Abstractions.dll": {}
         },
@@ -1106,7 +1318,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.Logging/5.0.0.0": {
+      "Microsoft.Extensions.Logging.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Logging.dll": {}
         },
@@ -1148,13 +1360,13 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.Options/5.0.0.0": {
+      "Microsoft.Extensions.Options.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Options.dll": {}
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.Primitives/5.0.0.0": {
+      "Microsoft.Extensions.Primitives.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Primitives.dll": {}
         },
@@ -1196,7 +1408,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Win32.Registry/5.0.0.0": {
+      "Microsoft.Win32.Registry.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Win32.Registry.dll": {}
         },
@@ -1754,7 +1966,7 @@
         },
         "compileOnly": true
       },
-      "System.Runtime.CompilerServices.Unsafe/5.0.0.0": {
+      "System.Runtime.CompilerServices.Unsafe.Reference/5.0.0.0": {
         "compile": {
           "System.Runtime.CompilerServices.Unsafe.dll": {}
         },
@@ -1844,7 +2056,7 @@
         },
         "compileOnly": true
       },
-      "System.Security.AccessControl/5.0.0.0": {
+      "System.Security.AccessControl.Reference/5.0.0.0": {
         "compile": {
           "System.Security.AccessControl.dll": {}
         },
@@ -1904,7 +2116,7 @@
         },
         "compileOnly": true
       },
-      "System.Security.Permissions/5.0.0.0": {
+      "System.Security.Permissions.Reference/5.0.0.0": {
         "compile": {
           "System.Security.Permissions.dll": {}
         },
@@ -1916,7 +2128,7 @@
         },
         "compileOnly": true
       },
-      "System.Security.Principal.Windows/5.0.0.0": {
+      "System.Security.Principal.Windows.Reference/5.0.0.0": {
         "compile": {
           "System.Security.Principal.Windows.dll": {}
         },
@@ -2146,6 +2358,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "CacheManager.Core/2.0.0-beta-1629": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uDn4IBcLJXS9wJN7h6617bYPCwHSoeM+RcjvnSyLUd1j3XXTRGuNpnDm/hCKKSUurSxLvlsxS8vx+D8R7nKgsg==",
+      "path": "cachemanager.core/2.0.0-beta-1629",
+      "hashPath": "cachemanager.core.2.0.0-beta-1629.nupkg.sha512"
+    },
+    "CacheManager.Microsoft.Extensions.Configuration/2.0.0-beta-1629": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QX+7h2XSugJh16+TUVtR1PrKxrMV3+sejrsaYECRAAK6LVyPnQguhWf1OHHwsHTI/aQZx0wPOoNP/S2fcehmXA==",
+      "path": "cachemanager.microsoft.extensions.configuration/2.0.0-beta-1629",
+      "hashPath": "cachemanager.microsoft.extensions.configuration.2.0.0-beta-1629.nupkg.sha512"
+    },
+    "CacheManager.Microsoft.Extensions.Logging/2.0.0-beta-1629": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MKMKg4GFBC0BhvYaK4qGdfIlb7Wz/gMMzudvsjPNV3MWbwvtOgNnZTCaNisFqB8LY58kzik74YtWMEf7ghvV4A==",
+      "path": "cachemanager.microsoft.extensions.logging/2.0.0-beta-1629",
+      "hashPath": "cachemanager.microsoft.extensions.logging.2.0.0-beta-1629.nupkg.sha512"
+    },
     "FluentValidation/9.3.0": {
       "type": "package",
       "serviceable": true,
@@ -2181,6 +2414,34 @@
       "path": "microsoft.csharp/4.7.0",
       "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.Configuration/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SsI4RqI8EH00+cYO96tbftlh87sNUv1eeyuBU1XZdQkG0RrHAOjWgl7P0FoLeTSMXJpOnfweeOWj2d1/5H3FxA==",
+      "path": "microsoft.extensions.configuration/2.0.0",
+      "hashPath": "microsoft.extensions.configuration.2.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rHFrXqMIvQNq51H8RYTO4IWmDOYh8NUzyqGlh0xHWTP6XYnKk7Ryinys2uDs+Vu88b3AMlM3gBBSs78m6OQpYQ==",
+      "path": "microsoft.extensions.configuration.abstractions/2.0.0",
+      "hashPath": "microsoft.extensions.configuration.abstractions.2.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Binder/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IznHHzGUtrdpuQqIUdmzF6TYPcsYHONhHh3o9dGp39sX/9Zfmt476UnhvU0UhXgJnXXAikt/MpN6AuSLCCMdEQ==",
+      "path": "microsoft.extensions.configuration.binder/2.0.0",
+      "hashPath": "microsoft.extensions.configuration.binder.2.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wakg18gHYiUL1pcjjyZuYk6OvDpbSw1E7IWxm78TMepsr+gQ8W0tWzuRm0q/9RFblngwPwo15rrgZSUV51W5Iw==",
+      "path": "microsoft.extensions.dependencyinjection/2.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.2.0.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
       "type": "package",
       "serviceable": true,
@@ -2194,6 +2455,48 @@
       "sha512": "sha512-09cu88Zv52jA/jSz8T4+P3zLQa7+7tGGBeOAXbTUVOwPAGahA7/vOAqWbPhVKSFbkERPWG87ZQldwz+KxQc8Dg==",
       "path": "microsoft.extensions.diagnosticadapter/3.1.10",
       "hashPath": "microsoft.extensions.diagnosticadapter.3.1.10.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VP10syWV/vxYYMKgZ2eDESmUsz3gPxvBn5J6tkVN8lI4M+dF43RN8fWsEPbcAneDmZrHl3Pv23z05nmyGkJlpg==",
+      "path": "microsoft.extensions.logging/2.0.0",
+      "hashPath": "microsoft.extensions.logging.2.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6ZCllUYGFukkymSTx3Yr0G/ajRxoNJp7/FqSxSB4fGISST54ifBhgu4Nc0ItGi3i6DqwuNd8SUyObmiC++AO2Q==",
+      "path": "microsoft.extensions.logging.abstractions/2.0.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Options/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sAKBgjl2gWsECBLLR9K54T7/uZaP2n9GhMYHay/oOLfvpvX0+iNAlQ2NJgVE352C9Fs5CDV3VbNTK8T2aNKQFA==",
+      "path": "microsoft.extensions.options/2.0.0",
+      "hashPath": "microsoft.extensions.options.2.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ukg53qNlqTrK38WA30b5qhw0GD7y3jdI9PHHASjdKyTcBHTevFM2o23tyk3pWCgAV27Bbkm+CPQ2zUe1ZOuYSA==",
+      "path": "microsoft.extensions.primitives/2.0.0",
+      "hashPath": "microsoft.extensions.primitives.2.0.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
+      "path": "microsoft.netcore.platforms/2.0.0",
+      "hashPath": "microsoft.netcore.platforms.2.0.0.nupkg.sha512"
+    },
+    "Microsoft.Win32.Registry/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
+      "path": "microsoft.win32.registry/4.5.0",
+      "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
     },
     "Newtonsoft.Json/12.0.2": {
       "type": "package",
@@ -2216,12 +2519,82 @@
       "path": "ocelot/17.0.1",
       "hashPath": "ocelot.17.0.1.nupkg.sha512"
     },
+    "Ocelot.Cache.CacheManager/17.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LctQUK1k5660to/b35oKz0mRuT4sBwLlZYQQlxKlbj0SYHWqaUjTGZuHmPO2G+AwhbxD1g9QWfaxfhsprBQO0A==",
+      "path": "ocelot.cache.cachemanager/17.0.1",
+      "hashPath": "ocelot.cache.cachemanager.17.0.1.nupkg.sha512"
+    },
+    "Ocelot.Provider.Polly/17.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-shOiXju4w8+UG3a+pMBUf9Avlcf4UVtRrHNhtaWyvKCBjpVKtA03fWe5o04d6OK9uhiFDI1e+lbZFgN5NgFeIQ==",
+      "path": "ocelot.provider.polly/17.0.1",
+      "hashPath": "ocelot.provider.polly.17.0.1.nupkg.sha512"
+    },
+    "Polly/7.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Od8SnPlpQr+PuAS0YzY3jgtzaDNknlIuAaldN2VEIyTvm/wCg22C5nUkUV1BEG8rIsub5RFMoV/NEQ0tM/+7Uw==",
+      "path": "polly/7.2.1",
+      "hashPath": "polly.7.2.1.nupkg.sha512"
+    },
+    "System.Configuration.ConfigurationManager/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UIFvaFfuKhLr9u5tWMxmVoDPkFeD+Qv8gUuap4aZgVGYSYMdERck4OhLN/2gulAc0nYTEigWXSJNNWshrmxnng==",
+      "path": "system.configuration.configurationmanager/4.5.0",
+      "hashPath": "system.configuration.configurationmanager.4.5.0.nupkg.sha512"
+    },
     "System.Diagnostics.DiagnosticSource/4.7.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-j81Lovt90PDAq8kLpaJfJKV/rWdWuEk6jfV+MBkee33vzYLEUsy4gXK8laa9V2nZlLM9VM9yA/OOQxxPEJKAMw==",
       "path": "system.diagnostics.diagnosticsource/4.7.1",
       "hashPath": "system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+    },
+    "System.Diagnostics.PerformanceCounter/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JUO5/moXgchWZBMBElgmPebZPKCgwW8kY3dFwVJavaNR2ftcc/YjXXGjOaCjly2KBXT7Ld5l/GTkMVzNv41yZA==",
+      "path": "system.diagnostics.performancecounter/4.5.0",
+      "hashPath": "system.diagnostics.performancecounter.4.5.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9dLLuBxr5GNmOfl2jSMcsHuteEg32BEfUotmmUkmZjpR3RpVHE8YQwt0ow3p6prwA1ME8WqDVZqrr8z6H8G+Kw==",
+      "path": "system.runtime.compilerservices.unsafe/4.4.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512"
+    },
+    "System.Security.AccessControl/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vW8Eoq0TMyz5vAG/6ce483x/CP83fgm4SJe5P8Tb1tZaobcvPrbMEL7rhH1DRdrYbbb6F0vq3OlzmK0Pkwks5A==",
+      "path": "system.security.accesscontrol/4.5.0",
+      "hashPath": "system.security.accesscontrol.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.ProtectedData/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wLBKzFnDCxP12VL9ANydSYhk59fC4cvOr9ypYQLPnAj48NQIhqnjdD2yhP8yEKyBJEjERWS9DisKL7rX5eU25Q==",
+      "path": "system.security.cryptography.protecteddata/4.5.0",
+      "hashPath": "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Permissions/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9gdyuARhUR7H+p5CjyUB/zPk7/Xut3wUSP8NJQB6iZr8L3XUXTMdoLeVAg9N4rqF8oIpE7MpdqHdDHQ7XgJe0g==",
+      "path": "system.security.permissions/4.5.0",
+      "hashPath": "system.security.permissions.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Principal.Windows/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-U77HfRXlZlOeIXd//Yoj6Jnk8AXlbeisf1oq1os+hxOGVnuG+lGSfGqTwTZBoORFF6j/0q7HXIl8cqwQ9aUGqQ==",
+      "path": "system.security.principal.windows/4.5.0",
+      "hashPath": "system.security.principal.windows.4.5.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
       "type": "referenceassembly",
@@ -2623,12 +2996,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.Configuration.Abstractions/5.0.0.0": {
+    "Microsoft.Extensions.Configuration.Abstractions.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.Configuration.Binder/5.0.0.0": {
+    "Microsoft.Extensions.Configuration.Binder.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -2638,7 +3011,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.Configuration/5.0.0.0": {
+    "Microsoft.Extensions.Configuration.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -2683,7 +3056,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.DependencyInjection/5.0.0.0": {
+    "Microsoft.Extensions.DependencyInjection.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -2758,7 +3131,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.Logging.Abstractions/5.0.0.0": {
+    "Microsoft.Extensions.Logging.Abstractions.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -2778,7 +3151,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.Logging/5.0.0.0": {
+    "Microsoft.Extensions.Logging.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -2813,12 +3186,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.Options/5.0.0.0": {
+    "Microsoft.Extensions.Options.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.Primitives/5.0.0.0": {
+    "Microsoft.Extensions.Primitives.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -2853,7 +3226,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Win32.Registry/5.0.0.0": {
+    "Microsoft.Win32.Registry.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -3318,7 +3691,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Runtime.CompilerServices.Unsafe/5.0.0.0": {
+    "System.Runtime.CompilerServices.Unsafe.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -3393,7 +3766,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Security.AccessControl/5.0.0.0": {
+    "System.Security.AccessControl.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -3443,7 +3816,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Security.Permissions/5.0.0.0": {
+    "System.Security.Permissions.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -3453,7 +3826,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Security.Principal.Windows/5.0.0.0": {
+    "System.Security.Principal.Windows.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
